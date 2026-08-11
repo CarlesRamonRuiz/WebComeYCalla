@@ -1,0 +1,88 @@
+header{
+    background-image: url("imagenes/backgroundheader.jpg");
+    text-align: center;
+    padding: 20px;
+}
+
+
+container div{
+    display: flex;
+}
+#carta {
+    background-image: none;
+    transition: 1s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#carta:hover {
+    background-image: url("imagenes/carta.jpg");
+    filter: blur(2px);
+    color: white;
+    text-shadow: black 1px 3px;
+
+}
+.botones{
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20%;
+}
+#comidas{
+   display: grid;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/imagenes/backgroundmenu.png");
+    background-size: cover;      /* La imagen cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    
+}
+.card{
+    h5{
+        color: lime;
+        text-shadow: 1px 3px darkgreen;
+    }
+    img{
+        height: 275px;
+        width: 300px;
+        display: block;
+        margin: auto;
+        padding-top: 10px;
+        border-radius: 20px;
+    }
+    .card-body{
+        text-shadow: 1px 2px black;
+    }
+    row-gap: 20px;
+    column-gap: 20px;
+    height: auto;
+    color: white;
+
+    width: 400px;
+    margin: 2px;
+    border-radius: 10px;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(21, 207, 0, 0.88) 100%);
+    border-color: black;
+
+}
+#linea{
+    background-color: black;
+    width: auto;
+    height: 0.5px;
+}
+#carousel-novedades{
+height: auto;
+    width: auto;
+}
+.imagen-carousel{
+    display: block;
+    margin: auto;
+    height: auto;
+    width: auto;
+}

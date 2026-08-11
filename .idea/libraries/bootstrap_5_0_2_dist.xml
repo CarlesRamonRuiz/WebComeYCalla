@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="bootstrap-5.0.2-dist" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$USER_HOME$/Downloads/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
