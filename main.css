@@ -2,35 +2,98 @@ header{
     background-image: url("imagenes/backgroundheader.jpg");
     text-align: center;
     padding: 20px;
+    position: sticky;
+    top: 0;
 }
-
-
+body{
+    display: flex;
+    flex-direction: column;
+}
 container div{
     display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
 }
 #carta {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    color: black;
+    text-shadow: grey 1px 1px;
+}
+
+#carta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: none;
-    transition: 1s;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: filter 1s, background-image 1s;
+
+    z-index: -1;
 }
 
-#carta:hover {
+#carta:hover::before {
     background-image: url("imagenes/carta.jpg");
     filter: blur(2px);
-    color: white;
-    text-shadow: black 1px 3px;
+}
+#carta:hover{
+color: white;
+    border-radius: 20%;
+}
+#contacto {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    color: black;
+    text-shadow: grey 1px 1px;
+}
 
+#contacto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: filter 1s, background-image 1s;
+
+    z-index: -1;
+}
+
+#contacto:hover::before {
+    background-image: url("imagenes/llama.png");
+    filter: blur(2px);
+
+}
+#contacto:hover{
+    color: white;
+    border-radius: 20%;
 }
 .botones{
     flex-direction: column;
     align-items: center;
+    align-content: center;
     background-color: beige;
     margin: 10px;
     padding: 10px;
     font-size: 20px;
-    border-radius: 20%;
+    border-radius: 10px;
+    transition: border-radius 0.4s ease-in-out;
+    height: 50px;
+    width: 100px;
+    position: sticky;
+    top: 0;
 }
 #comidas{
    display: grid;
@@ -71,18 +134,29 @@ container div{
     border-color: black;
 
 }
-#linea{
-    background-color: black;
-    width: auto;
-    height: 0.5px;
+
+#carousel-novedades {
+    max-width: 800px;
+    margin: 0 auto;         /* centra el carrusel en la página */
+    justify-content: center;
+    align-items: center;
+    background-image: url("/imagenes/backgroundmenu.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-#carousel-novedades{
-height: auto;
-    width: auto;
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.imagen-carousel{
+
+.imagen-carousel {
     display: block;
-    margin: auto;
-    height: auto;
-    width: auto;
+    margin: 0 auto;
+    width: 100%;
+    height: 20%;
+    object-fit: cover;
+    object-position: center;   /* centra el recorte de la imagen dentro del marco */
 }
