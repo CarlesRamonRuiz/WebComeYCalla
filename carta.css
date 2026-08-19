@@ -200,7 +200,7 @@ body{
     opacity: 1;
 }
 /*COMIDAS*/
-#tostadas, #montaditos, #bebidas, #batidos, #dulces, #bocadillos, #camperos, #entrantes, #combinados, #hamburguesasEspeciales, #hamburguesas, #helados{
+#tostadas, #montaditos, #cafes, #batidos, #dulces, #bocadillos, #camperos, #entrantes, #combinados, #hamburguesasEspeciales, #hamburguesas, #helados{
     margin: 5px;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -222,8 +222,8 @@ body{
 
         border-radius: 20px;
     }
-    row-gap: 20px;
-    column-gap: 20px;
+    row-gap: 15px;
+    column-gap: 35px;
     height: auto;
     width: 300px;
     margin: 2px;
@@ -289,14 +289,7 @@ body{
     overflow: hidden;
     background: #000000;
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(21, 207, 0, 0.88) 100%);
-    img{
-        height: 275px;
-        width: 300px;
-        display: block;
-        margin: auto;
-        padding-top: 10px;
-        border-radius: 20px;
-    }
+
 }
 #luthor::before{
     content: "";
@@ -315,7 +308,138 @@ body{
     z-index: 1;
 }
 
+#harley{
+    overflow: hidden;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(201, 6, 6, 0.88) 100%);
+    h5{
+        color: red;
+        text-shadow: darkred 2px 1px;
+    }
+}
+#harley::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("imagenes/burguers/harleybg.png");
+    background-size: cover;
+    background-position: center 250px;
+    background-repeat: no-repeat;
 
+    opacity: 0.7; /* 👈 opacidad SOLO de la imagen */
+    pointer-events: none;
+}
+#harley > * {
+    position: relative;
+    z-index: 1;
+}
+
+#catwoman{
+    overflow: hidden;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(222, 222, 222, 0.88) 100%);
+
+    h5{
+        color: white;
+        text-shadow: black 2px 1px;
+    }
+}
+#catwoman::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("imagenes/burguers/catwomanbg.png");
+    background-size: cover;
+    background-position: center 100px;
+    background-repeat: no-repeat;
+
+    opacity: 0.7; /* 👈 opacidad SOLO de la imagen */
+    pointer-events: none;
+}
+#catwoman > * {
+    position: relative;
+    z-index: 1;
+}
+
+#doblecara{
+    overflow: hidden;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(130, 87, 87, 0.88) 100%);
+
+    h5{
+        color: red;
+        text-shadow: tan 2px 1px;
+    }
+}
+#doblecara::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("imagenes/burguers/doblecarabg.png");
+    background-size: cover;
+    background-position: center 100px;
+    background-repeat: no-repeat;
+
+    opacity: 0.7; /* 👈 opacidad SOLO de la imagen */
+    pointer-events: none;
+}
+#doblecara > * {
+    position: relative;
+    z-index: 1;
+}
+
+#duendeverde{
+    overflow: hidden;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(102, 255, 99, 0.88) 100%);
+    h5{
+        color: greenyellow;
+        text-shadow: darkgreen 2px 1px;
+    }
+}
+#duendeverde::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("imagenes/burguers/duendeverdebg.png");
+    background-size: cover;
+    background-position: center 100px;
+    background-repeat: no-repeat;
+
+    opacity: 0.7; /* 👈 opacidad SOLO de la imagen */
+    pointer-events: none;
+}
+#duendeverde > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+#lottus{
+    overflow: hidden;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(240, 170, 79, 0.88) 100%);
+    h5{
+        color: beige;
+        text-shadow: black 2px 1px;
+    }
+}
+#lottus::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-size: cover;
+    background-position: center 100px;
+    background-repeat: no-repeat;
+
+    opacity: 0.7; /* 👈 opacidad SOLO de la imagen */
+    pointer-events: none;
+}
+#lottus > * {
+    position: relative;
+    z-index: 1;
+}
 /*FOOTER*/
 footer{
     display: grid;
