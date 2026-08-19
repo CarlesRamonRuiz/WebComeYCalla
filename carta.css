@@ -11,10 +11,7 @@ header{
     justify-content: center;
 
 }
-body{
-    display: flex;
-    flex-direction: column;
-}
+
 #header-novedades{
     font-family: footer-font;
     margin: 2px;
@@ -95,7 +92,7 @@ body{
     filter: blur(2px);
 }
 #carta:hover{
-color: white;
+    color: white;
     border-radius: 20%;
 }
 #contacto {
@@ -148,114 +145,69 @@ color: white;
     font-family: header-font;
     font-size: 30px;
     text-align: center;
+
     justify-content: center;
 
 
 }
 .botones:hover{
-scale: 1.10;
-}
-
-
-
-/*CAROUSEL*/
-#carousel-novedades {
-    width: 100%;
-    max-width: 750px;
-    margin: 20px auto;
-    transition: scale 1s;
-
-}
-#carousel-novedades:hover{
     scale: 1.10;
 }
-#carouselExample{
-    border: black solid 2px;
-    border-radius: 12px;
-}
-.carousel-item {
-    position: relative;
-    text-align: center;
-}
-.carousel-item::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-            to bottom,
-            transparent 45%,
-            rgba(0, 0, 0, 0.4) 65%,
-            rgba(0, 0, 0, 0.9) 90%,
-            black 100%
-    );
-
-    z-index: 1;
-    pointer-events: none;
-}
-.imagen-carousel {
-    display: block;
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 12px;
-    transition: scale 2s;
-}
-.carousel-caption {
-    font-family: villain-font;
-
-    /* Quitamos el rectángulo negro */
-    background-color: transparent;
-
-    /* Colocamos el texto encima del gradient */
-    z-index: 2;
-
-    color: white;
-}
-.carousel-caption h5 {
-    color: greenyellow;
-    text-decoration: underline;
-    text-shadow: 2px 2px 3px black;
-}
-.carousel-caption p {
-    color: white;
-    text-shadow: 2px 2px 3px black;
-}
-
-#car2{
-
-}
-
-
-/*COMIDAS*/
-#masvendido{
-    font-family: footer-font;
-    text-decoration: underline;
-}
-#famosos{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 40px;
-}
-
-#comidas {
+/**/
+/*BODY*/
+body{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    margin: 0px;
-    background-image: url("/imagenes/backgroundmenu.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+}
+#orden{
+    display: grid;
+    grid-template-columns: 350px auto;
+    font-family: menu;
+
+}
+#seleccion{
+    flex-direction: column;
+    background-color: lightgrey;
+    padding: 20px;
+    font-size: 25px;
+    position: sticky;
+    top: 115px;
+    height: calc(100vh - 115px);
+    overflow-y: auto;
+    align-self: start;
+}
+#comidas{
+    h1{
+        font-size: 48px;
+    }
+
+    flex-direction: column;
+    text-align: center;
+}
+#seleccion p {
+    font-weight: normal;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+#seleccion p:hover{
+    opacity: 0.8;
+    transition: 0.2s;
+    color: black;
+    text-decoration: underline 1px;
+}
+#seleccion p.active {
+    font-weight: bold;
+    opacity: 1;
+}
+/*COMIDAS*/
+#tostadas, #montaditos, #bebidas, #batidos, #dulces, #bocadillos, #camperos, #entrantes, #combinados, #hamburguesasEspeciales, #hamburguesas, #helados{
+    margin: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 .card{
     transition: scale 1s;
     h5{
-        font-family: villain-font;
-        color: lime;
-        text-shadow: 1px 3px darkgreen;
         text-decoration: underline;
     }
     img{
@@ -270,31 +222,38 @@ scale: 1.10;
 
         border-radius: 20px;
     }
-    .card-body{
-        text-shadow: 1px 2px black;
-    }
     row-gap: 20px;
     column-gap: 20px;
     height: auto;
-    color: white;
-
-    width: 400px;
+    width: 300px;
     margin: 2px;
     border-radius: 10px;
-    background: #000000;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(21, 207, 0, 0.88) 100%);
     border: black solid 2px;
 
 }
 .card:hover{
-    scale: 1.10;
+    scale: 1.05;
 }
-
-/*Hamburguesas mas vendidas*/
+/*BURGERS*/
+#hamburguesasEspeciales{
+    h5{
+        font-family: villain-font;
+        color: lime;
+        text-shadow: 1px 3px darkgreen;
+        text-decoration: underline;
+    }
+    .btn{
+        text-shadow: black 1px 1px;
+    }
+    p{
+        color: white;
+        text-shadow: black 2px 1px;
+    }
+}
 #joker{
     background: #000000;
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(179, 0, 255, 0.88) 100%);
-overflow: hidden;
+    overflow: hidden;
     img{
         height: 275px;
         width: 300px;
@@ -306,6 +265,7 @@ overflow: hidden;
     h5{
         color: yellow;
         text-shadow: 2px 1px darkgoldenrod;
+
     }
 }
 #joker::before{
@@ -327,6 +287,8 @@ overflow: hidden;
 
 #luthor{
     overflow: hidden;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(21, 207, 0, 0.88) 100%);
     img{
         height: 275px;
         width: 300px;
@@ -353,39 +315,6 @@ overflow: hidden;
     z-index: 1;
 }
 
-#quitap{
-    background: #000000;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 162, 0, 0.88) 100%);
-    overflow: hidden;
-    img{
-        height: 275px;
-        width: 300px;
-        display: block;
-        margin: auto;
-        padding-top: 10px;
-        border-radius: 20px;
-    }
-    h5{
-        color: orange;
-        text-shadow: 1px 2px darkgoldenrod ;
-    }
-
-}
-#quitap::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center 150px;
-    background-repeat: no-repeat;
-
-    opacity: 0.7; /* 👈 opacidad SOLO de la imagen */
-    pointer-events: none;
-}
-#quitap > * {
-    position: relative;
-    z-index: 1;
-}
 
 /*FOOTER*/
 footer{
@@ -432,4 +361,8 @@ footer{
 @font-face {
     font-family: footer-font;
     src: url("fonts/Raleway-Bold.ttf");
+}
+@font-face {
+    font-family: menu;
+    src: url("fonts/mops.ttf");
 }

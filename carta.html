@@ -1,10 +1,344 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" suppresshydrationwarning="true" data-lt-installed="true"><head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Come y calla</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="carta.css">
+    <link rel="icon" href="imagenes/loli.png" type="image/x-icon">
+    <script src="main.js" defer=""></script>
 </head>
 <body>
+<header>
+    <div id="logo-container">
+        <img id="logo" src="imagenes/logo.png" onclick="redireccionI()">
+    </div>
 
-</body>
-</html>
+    <div id="navegador">
+        <div id="inicio" onclick="redireccionI()" class="botones">Inicio</div>
+        <div id="contacto" onclick="redireccionCO()" class="botones">Contacto</div>
+    </div>
+</header>
+<div id="orden">
+    <div id="seleccion">
+        <p id="menu-tostadas" class="">TOSTADAS</p>
+        <p id="menu-montaditos" class="">MONTADITOS</p>
+        <p id="menu-bebidas" class="active">BEBIDAS</p>
+        <p id="menu-batidos">BATIDOS</p>
+        <p id="menu-dulces">DULCES</p>
+        <p id="menu-bocadillos">BOCADILLOS</p>
+        <p id="menu-camperos">CAMPEROS</p>
+        <p id="menu-entrantes">ENTRANTES</p>
+        <p id="menu-combinados">PLATOS COMBINADOS</p>
+        <p id="menu-hamburguesasEspeciales">HAMBURGUESAS ESPECIALES</p>
+        <p id="menu-hamburguesas">HAMBURGUESAS</p>
+        <p id="menu-helados">HELADOS</p>
+    </div>
+    <div id="comidas">
+        <h1>TOSTADAS</h1>
+        <div id="tostadas">
+            <div id="aceiteYSal" class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Aceite y sal</h5>
+
+                    <p class="card-text">
+                    </p>
+
+                    <p class="btn btn-primary">
+                        Por 2€
+                    </p>
+                </div>
+            </div>
+            <div id="atunTomateQueso" class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tomate y atún</h5>
+
+                    <p class="card-text">A esta tostada se le puede añadir queso por 0,10€
+                    </p>
+
+                    <p class="btn btn-primary">
+                        Por 2€
+                    </p>
+                </div>
+            </div>
+            <div id="mixta" class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tomate, aceite y sal</h5>
+
+                    <p class="card-text">
+                    </p>
+
+                    <p class="btn btn-primary">
+                        Por 2€
+                    </p>
+                </div>
+            </div>
+            <div id="jamonQueso" class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tomate, Jamon Serrano y Queso</h5>
+
+                    <p class="card-text">
+                    </p>
+
+                    <p class="btn btn-primary">
+                        Por 2€
+                    </p>
+                </div>
+            </div>
+            <div id="mantequilla" class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Mantequilla</h5>
+
+                    <p class="card-text">
+                    </p>
+
+                    <p class="btn btn-primary">
+                        Por 2€
+                    </p>
+                </div>
+            </div>
+            <div id="" class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Aceite y sal</h5>
+
+                    <p class="card-text">
+                    </p>
+
+                    <p class="btn btn-primary">
+                        Por 2€
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h1>MONTADITOS</h1>
+        <div id="montaditos">
+
+        </div>
+        <h1>BEBIDAS</h1>
+        <div id="bebidas">
+
+        </div>
+        <h1>BATIDOS</h1>
+        <div id="batidos">
+
+        </div>
+        <h1>DULCES</h1>
+        <div id="dulces">
+
+        </div>
+        <h1>BOCADILLOS</h1>
+        <div id="bocadillos">
+
+        </div>
+        <h1>CAMPEROS</h1>
+        <div id="camperos">
+
+        </div>
+        <h1>ENTRANTES</h1>
+        <div id="entrantes">
+        </div>
+        <h1>COMBINADOS</h1>
+        <div id="combinados">
+            <div id="lomo-comb" class="card">
+                <div class="card-body">
+                    <img src="imagenes/combinados/lomo.jpeg" class="card-img-top" alt="lomo">
+                    <h5 class="card-title">Combinado de lomo</h5>
+
+                    <p class="card-text">Este plato viene con 2 filetes de lomo, patatas, arroz y ensalada
+                    </p>
+
+                    <p class="btn btn-danger">
+                        Por 9,50€
+                    </p>
+                </div>
+            </div>
+            <div id="pollo-comb" class="card">
+                <div class="card-body">
+                    <img src="imagenes/combinados/empanado.jpeg" class="card-img-top" alt="burger joker">
+                    <h5 class="card-title">Combinado de pollo/pollo empanado</h5>
+
+                    <p class="card-text">Este plato viene con 2 filetes de pollo, patatas, arroz y ensalada
+                    </p>
+
+                    <p class="btn btn-danger">
+                        Por 9,50€
+                    </p>
+                </div>
+            </div>
+            <div id="milanesa-comb" class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Combinado de milanesa</h5>
+
+                    <p class="card-text">Este plato viene con 1 buen filete de milanesa, patatas y arroz
+                    </p>
+
+                    <p class="btn btn-danger">
+                        Por 9,50€
+                    </p>
+                </div>
+            </div>
+            <div id="alitasPollo-comb" class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Combinado de alitas de pollo</h5>
+
+                    <p class="card-text">Este plato viene con 1 buena ración de alitas de pollo, patatas, arroz y ensalada
+                    </p>
+
+                    <p class="btn btn-danger">
+                        Por 9,50€
+                    </p>
+                </div>
+            </div>
+            <div id="calamares-comb" class="card">
+                <div class="card-body">
+                    <img src="imagenes/combinados/combinadocalamares.jpeg" class="card-img-top" alt="burger joker">
+                    <h5 class="card-title">Combinado de calamares</h5>
+
+                    <p class="card-text">Este plato viene con 1 buena ración de calamares, patatas, arroz y ensalada
+                    </p>
+
+                    <p class="btn btn-danger">
+                        Por 9,50€
+                    </p>
+                </div>
+            </div>
+            <div id="sepia-comb" class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Combinado de Sepia rebozada</h5>
+
+                    <p class="card-text">Este plato viene con Sepia rebozada, patatas, arroz y ensalada
+                    </p>
+
+                    <p class="btn btn-danger">
+                        Por 10,50€
+                    </p>
+                </div>
+            </div>
+            <div id="costillasbbq-comb" class="card">
+                <div class="card-body">
+                    <img src="imagenes/combinados/costillarbbq.jpeg" class="card-img-top" alt="burger joker">
+                    <h5 class="card-title">Combinado de costillar de BBQ</h5>
+
+                    <p class="card-text">Este plato viene con un costillar de BBQ, patatas, arroz y ensalada
+                    </p>
+
+                    <p class="btn btn-danger">
+                        Por 18,00€
+                    </p>
+                </div>
+            </div>
+            <div id="cachopo-comb" class="card">
+                <div class="card-body">
+                    <img src="imagenes/combinados/milanesa.jpg" class="card-img-top" alt="burger joker">
+                    <h5 class="card-title">Combinado de costillar de BBQ</h5>
+
+                    <p class="card-text">Este plato viene con un costillar de BBQ, patatas, arroz y ensalada
+                    </p>
+
+                    <p class="btn btn-danger">
+                        Por 19,90€
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h1>HAMBURGUESAS ESPECIALES</h1>
+        <div id="hamburguesasEspeciales">
+            <div id="joker" class="card">
+                <img src="imagenes/burguers/burgerjoker.jpeg" class="card-img-top" alt="burger joker">
+
+                <div class="card-body">
+                    <h5 class="card-title">Joker Burguer</h5>
+
+                    <p class="card-text">
+                        La hamburguesa reina del Come y calla, deleita tu paladar con su Disco de ternera Angus de 180grs, doble queso cheddar, doble bacón crujiente, huevo, cebolla crujiente, salsa BBQ, salsa cheddar y patatas fritas
+                    </p>
+
+                    <p class="btn btn-warning">
+                        Cómetela por 12€
+                    </p>
+                </div>
+            </div>
+            <div id="luthor" class="card">
+                <img src="imagenes/burguers/burgerojo.jpeg" class="card-img-top" alt="burger ojo">
+
+                <div class="card-body">
+                    <h5 class="card-title">Lex Luthor</h5>
+
+                    <p class="card-text">
+                        La kriptonita de superman llega al Come y calla con deliciosa carne de costilla
+                    </p>
+
+                    <p class="btn btn-warning">
+                        Cómetela por 16€
+                    </p>
+                </div>
+            </div>
+            <div id="harley" class="card">
+
+                <div class="card-body">
+                    <h5 class="card-title">Harley Quinn</h5>
+
+                    <p class="card-text">
+                        Esta hamburguesa lleva Disco de ternera Angus 180 grs. doble queso cheddar, aros de cebolla, pimiento, salsa Gotham y patatas fritas.
+                    </p>
+
+                    <p class="btn btn-warning">
+                        Cómetela por 12€
+                    </p>
+                </div>
+            </div>
+            <div id="catwoman" class="card">
+
+                <div class="card-body">
+                    <h5 class="card-title">Catwoman</h5>
+
+                    <p class="card-text">
+                        Esta hamburguesa lleva Disco de ternera Angus 180 grs. doble queso cheddar, aros de cebolla, pimiento, salsa Gotham y patatas fritas.
+                    </p>
+
+                    <p class="btn btn-warning">
+                        Cómetela por 12€
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <h1>HAMBURGUESAS</h1>
+        <div id="hamburguesas">
+            <div id="quitap" class="card">
+                <img src="imagenes/burguers/quitapenas.jpeg" class="card-img-top" alt="burger ojo">
+
+                <div class="card-body">
+                    <h5 class="card-title">Quita penas</h5>
+
+                    <p class="card-text">
+                        Nuestra tenebrosa hamburguesa de carne de ternera imperial,
+                        costillas desmenuzadas, queso chedar, salsa picante casera,
+                        huevo, bacon crujiente
+                    </p>
+
+                    <p class="btn btn-primary">
+                        Cómetela por 9€
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h1>HELADOS</h1>
+        <div id="helados">
+
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="izquierda-footer">
+        <p>¡Siguenos en nuestras redes sociales para estar al día con nuestras novedades!</p>
+        <div class="icons-footer">
+            <img src="imagenes/instagram.png" onclick="redireccionIns()">
+            <img src="imagenes/tiktok.png" onclick="redireccionTik()">
+            <img src="imagenes/facebook.png" onclick="redireccionFac()">
+        </div>
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body></html>
