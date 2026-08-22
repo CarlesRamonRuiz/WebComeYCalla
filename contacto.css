@@ -443,7 +443,7 @@ body{
 /*FOOTER*/
 footer{
     display: grid;
-    grid-template-columns: 400px auto 500px;
+    grid-template-columns: 400px auto auto;
     background-image: url("imagenes/footer.png");
     background-size: cover;      /* La imagen cubre todo el contenedor */
     background-position: center; /* Centra la imagen */
@@ -470,19 +470,6 @@ footer{
 }
 .icons-footer img:hover{
     scale: 1.10
-}
-#derecha-footer{
-    padding: 10px;
-    background-color: beige;
-    border: 2px;
-    border-color: white;
-    border-radius: 20px ;
-    color: black;
-    text-shadow: white 2px 1px;
-    p{
-        text-decoration: underline;
-    }
-
 }
 
 
