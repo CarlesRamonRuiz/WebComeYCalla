@@ -11,7 +11,6 @@ header{
     justify-content: center;
 
 }
-
 #header-novedades{
     font-family: footer-font;
     margin: 2px;
@@ -32,8 +31,7 @@ header{
 #logo{
     width: 75px;
     height: 75px;
-    border-radius: 40%;
-    border: black solid 2px;
+
     transition: scale 1s;
 }
 #logo:hover{
@@ -65,6 +63,10 @@ header{
     background-image: url("imagenes/inicio.png");
     filter: blur(2px);
 }
+#inicio:hover {
+    color: white;
+    border-radius: 20%;
+}
 #carta {
     position: relative;
     overflow: hidden;
@@ -92,37 +94,6 @@ header{
     filter: blur(2px);
 }
 #carta:hover{
-    color: white;
-    border-radius: 20%;
-}
-#contacto {
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    color: black;
-    text-shadow: grey 1px 1px;
-}
-#contacto::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: none;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: filter 1s, background-image 1s;
-
-    z-index: -1;
-}
-#contacto:hover::before {
-    background-image: url("imagenes/llama.png");
-    filter: blur(2px);
-
-}
-#contacto:hover{
     color: white;
     border-radius: 20%;
 }
@@ -200,10 +171,13 @@ body{
     opacity: 1;
 }
 /*COMIDAS*/
-#tostadas, #montaditos, #cafes, #batidos, #dulces, #bocadillos, #camperos, #entrantes, #combinados, #hamburguesasEspeciales, #hamburguesas, #helados{
+#tostadas, #montaditos, #cafes, #batidos, #bocadillos, #camperos, #entrantes, #combinados, #hamburguesasEspeciales, #hamburguesas, #helados, #pizza{
     margin: 5px;
     display: grid;
     grid-template-columns: auto auto auto;
+    justify-content: center;
+    column-gap: 60px;
+    row-gap: 20px;
 }
 .card{
     transition: scale 1s;
@@ -234,6 +208,12 @@ body{
 .card:hover{
     scale: 1.05;
 }
+ #camperos, #dulces{
+     display: grid;
+     grid-template-columns: auto auto;
+     justify-content: center;
+     column-gap: 60px;
+ }
 /*BURGERS*/
 #hamburguesasEspeciales{
     h5{
@@ -448,13 +428,30 @@ footer{
     background-size: cover;      /* La imagen cubre todo el contenedor */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat;
-    height: 250px;
+    height: 400px;
     color: white;
     font-family: footer-font;
     text-align: center;
     text-shadow: black 2px 1px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     font-size: 20px;
+    column-gap: 20px;
     padding: 20px;
+}
+#izquierda-footer{
+    display: flex;
+    column-gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+#logofooter{
+    height: 160px;
+    width: 160px;
+    padding: 10px;
 }
 .icons-footer{
     img{
@@ -479,11 +476,38 @@ footer{
     border-radius: 20px ;
     color: black;
     text-shadow: white 2px 1px;
+    justify-content: center;
+    align-items: center;
     p{
         text-decoration: underline;
     }
 
 }
+#alergenos{
+    background-color: antiquewhite;
+    color: black;
+    text-shadow: white 1px 2px;
+    border-radius: 20px;
+    border: red solid 6px;
+    font-size: 16px;
+    h3{
+        text-decoration: underline;
+    }
+    h4{
+        text-decoration: underline;
+    }
+}
+#lista{
+    display: grid;
+    justify-content: center;
+    column-gap: 4px;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    img{
+        height: 80px;
+        width: 60px;
+    }
+}
+
 
 
 /*FUENTES*/

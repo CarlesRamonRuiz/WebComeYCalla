@@ -4,12 +4,6 @@ function redireccionI(){
 function redireccionC(){
     window.location.href = 'carta.html';
 }
-function redireccionCO(){
-    window.location.href = 'contacto.html';
-}
-function redireccionI(){
-    window.location.href = 'main.html';
-}
 function redireccionIns(){
 window.location.href = 'https://www.instagram.com/comeycallapulpi/'
 }
