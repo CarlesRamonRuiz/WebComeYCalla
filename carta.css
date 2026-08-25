@@ -73,6 +73,8 @@ header{
     z-index: 0;
     color: black;
     text-shadow: grey 1px 1px;
+    justify-content: center;
+    text-align: center;
 }
 #carta::before {
     content: "";
