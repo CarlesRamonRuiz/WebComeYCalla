@@ -68,14 +68,14 @@ header{
     color: white;
     border-radius: 20%;
 }
-#carta {
+.carta-link {
     position: relative;
     overflow: hidden;
     z-index: 0;
     color: black;
     text-shadow: grey 1px 1px;
 }
-#carta::before {
+.carta-link::before {
     content: "";
     position: absolute;
     top: 0;
@@ -90,11 +90,11 @@ header{
 
     z-index: -1;
 }
-#carta:hover::before {
+.carta-link:hover::before {
     background-image: url("imagenes/carta.jpg");
     filter: blur(2px);
 }
-#carta:hover{
+.carta-link:hover{
     color: white;
     border-radius: 20%;
 }
@@ -214,7 +214,7 @@ header{
     align-items: center;
     gap: 25px;
     margin: 0px;
-    background-image: url("/imagenes/backgroundmenu.png");
+    background-image: url("imagenes/backgroundmenu.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

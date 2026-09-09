@@ -1,37 +1,40 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Come y calla</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="carta.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="icon" href="imagenes/loli.png" type="image/x-icon">
     <script src="main.js" defer=""></script>
 </head>
 <body>
 <header>
     <div id="logo-container">
-        <img id="logo" src="imagenes/logo.png" onclick="redireccionI()">
+        <a href="main.html" aria-label="Come y calla, inicio"><img id="logo" src="imagenes/logo.png" alt="Come y calla"></a>
     </div>
 
     <div id="navegador">
-        <div id="inicio" onclick="redireccionI()" class="botones">Inicio</div>
-        <div id="carta" onclick="redireccionC()" class="botones">Carta</div>
+        <a id="inicio" href="main.html" class="botones">Inicio</a>
+        <a href="carta.html" class="botones carta-link">Carta</a>
     </div>
 </header>
 <div id="orden">
     <div id="seleccion">
-        <p id="menu-tostadas">TOSTADAS</p>
-        <p id="menu-montaditos">MONTADITOS</p>
-        <p id="menu-batidos">BATIDOS</p>
-        <p id="menu-dulces">DULCES</p>
-        <p id="menu-bocadillos">BOCADILLOS</p>
-        <p id="menu-camperos">CAMPEROS</p>
-        <p id="menu-entrantes">ENTRANTES</p>
-        <p id="menu-pizza">PIZZAS</p>
-        <p id="menu-combinados">PLATOS COMBINADOS</p>
-        <p id="menu-hamburguesasEspeciales">HAMBURGUESAS ESPECIALES</p>
-        <p id="menu-hamburguesas">HAMBURGUESAS</p>
-        <p id="menu-helados">HELADOS/GRANIZADOS</p>
+        <a id="menu-tostadas" href="#tostadas">TOSTADAS</a>
+        <a id="menu-montaditos" href="#montaditos">MONTADITOS</a>
+        <a id="menu-batidos" href="#batidos">BATIDOS</a>
+        <a id="menu-dulces" href="#dulces">DULCES</a>
+        <a id="menu-bocadillos" href="#bocadillos">BOCADILLOS</a>
+        <a id="menu-camperos" href="#camperos">CAMPEROS</a>
+        <a id="menu-entrantes" href="#entrantes">ENTRANTES</a>
+        <a id="menu-pizza" href="#pizza">PIZZAS</a>
+        <a id="menu-combinados" href="#combinados">PLATOS COMBINADOS</a>
+        <a id="menu-hamburguesasEspeciales" href="#hamburguesasEspeciales">HAMBURGUESAS ESPECIALES</a>
+        <a id="menu-hamburguesas" href="#hamburguesas">HAMBURGUESAS</a>
+        <a id="menu-helados" href="#helados">HELADOS/GRANIZADOS</a>
     </div>
     <div id="comidas">
         <h1>TOSTADAS</h1>
@@ -792,7 +795,6 @@
                 </div>
             </div>
         </div>
-        <div id="hamburguesas-villanos">
             <h1>HAMBURGUESAS ESPECIALES</h1>
             <div id="hamburguesasEspeciales">
                 <div id="joker" class="card">
@@ -899,7 +901,6 @@
 
             </div>
 
-        </div>
         <h1>HAMBURGUESAS</h1>
         <div id="hamburguesas">
             <div id="clasica" class="card">

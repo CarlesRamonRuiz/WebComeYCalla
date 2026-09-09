@@ -14,50 +14,37 @@ function redireccionFac(){
     window.location.href = 'https://www.facebook.com/friends/suggestions/?profile_id=100023056153491&locale=es_ES'
 }
 
-const secciones = document.querySelectorAll("#comidas > div");
+// Las categorías son enlaces nativos: funcionan también sin JavaScript.
+const opcionesMenu = [...document.querySelectorAll("#seleccion a")];
+const secciones = opcionesMenu.map(opcion =>
+    document.getElementById(opcion.hash.slice(1))
+).filter(Boolean);
 
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-            // Quitamos active de todos
-            document.querySelectorAll("#seleccion p").forEach(elemento => {
-                elemento.classList.remove("active");
-            });
-
-            // Obtenemos el id de la sección visible
-            const id = entry.target.id;
-
-            // Activamos su elemento del menú
-            document
-                .querySelector(`#menu-${id}`)
-                .classList.add("active");
+if (secciones.length) {
+    let pendiente = false;
+    function actualizarCategoria() {
+        const margen = parseFloat(getComputedStyle(document.documentElement)
+            .getPropertyValue("--section-offset")) + 20;
+        let actual = secciones[0];
+        for (const seccion of secciones) {
+            if (seccion.previousElementSibling.getBoundingClientRect().top <= margen) {
+                actual = seccion;
+            }
         }
-
-    });
-
-}, {
-    threshold: 0.5
-});
-
-secciones.forEach(seccion => {
-    observer.observe(seccion);
-});
-const opcionesMenu = document.querySelectorAll("#seleccion p");
-
-opcionesMenu.forEach(opcion => {
-    opcion.addEventListener("click", () => {
-
-        // menu-hamburguesas -> hamburguesas
-        const idSeccion = opcion.id.replace("menu-", "");
-
-        const seccion = document.getElementById(idSeccion);
-
-        seccion.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
+        opcionesMenu.forEach(opcion => {
+            const activa = opcion.hash === `#${actual.id}`;
+            opcion.classList.toggle("active", activa);
+            if (activa) opcion.setAttribute("aria-current", "location");
+            else opcion.removeAttribute("aria-current");
         });
-    });
-});
+        pendiente = false;
+    }
+    window.addEventListener("scroll", () => {
+        if (!pendiente) {
+            pendiente = true;
+            requestAnimationFrame(actualizarCategoria);
+        }
+    }, { passive: true });
+    window.addEventListener("resize", actualizarCategoria);
+    actualizarCategoria();
+}

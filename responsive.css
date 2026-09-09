@@ -1,0 +1,98 @@
+/* Ajustes compartidos para inicio y carta. */
+:root { --header-height: 110px; --section-offset: 126px; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+img { max-width: 100%; }
+.botones { text-decoration: none; cursor: pointer; }
+a:focus-visible { outline: 3px solid #1769aa; outline-offset: 3px; }
+#comidas { min-width: 0; padding: 20px clamp(12px, 2vw, 32px) 32px; }
+#comidas > h1, #comidas > h2, #comidas > h3, #header-novedades {
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+#famosos {
+    width: 100%;
+    max-width: 1300px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(16px, 3vw, 40px);
+}
+#comidas .card { width: 100%; min-width: 0; margin: 0; }
+#comidas .card img { max-width: 100%; }
+#orden { grid-template-columns: 280px minmax(0, 1fr); }
+#seleccion { top: var(--header-height); height: calc(100dvh - var(--header-height)); }
+#seleccion a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 0;
+    line-height: 1.3;
+}
+#seleccion a:hover { text-decoration: underline; }
+#seleccion a.active { font-weight: bold; color: black; text-decoration: underline; }
+#orden #comidas > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 300px));
+    gap: 20px;
+    margin: 5px 0 28px;
+    justify-content: center;
+}
+#orden #comidas > h1 { scroll-margin-top: var(--section-offset); }
+footer {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr);
+    height: auto;
+    min-height: 400px;
+    gap: 24px;
+}
+footer > div { min-width: 0; }
+#alergenos { padding: 12px; }
+#lista { grid-template-columns: repeat(auto-fit, 60px); gap: 4px; }
+@media (max-width: 1100px) {
+    footer { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #derecha-footer { grid-column: 1 / -1; }
+    #famosos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+    :root { --header-height: 80px; --section-offset: 160px; }
+    header { height: var(--header-height); padding: 8px 12px; justify-content: space-between; gap: 12px; }
+    #logo-container { position: static; flex-shrink: 0; }
+    #logo { width: 60px; height: 60px; }
+    #navegador { position: static; gap: 8px; }
+    .botones { width: 88px; min-height: 44px; margin: 0; font-size: 26px; }
+    #header-novedades { font-size: clamp(28px, 7vw, 40px); }
+    #famosos { grid-template-columns: minmax(0, 1fr); max-width: 440px; }
+    #carousel-novedades { margin: 0 auto; }
+    .imagen-carousel { height: clamp(220px, 65vw, 360px); }
+    .carousel-item { background: #111; }
+    .carousel-item::after { display: none; }
+    .carousel-caption { position: static; padding: 20px 32px 40px; min-height: 215px; }
+    .carousel-caption p { margin-bottom: 0; }
+    .carousel-control-prev, .carousel-control-next { bottom: auto; height: clamp(220px, 65vw, 360px); }
+    #orden { display: block; }
+    #seleccion {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        position: sticky;
+        z-index: 900;
+        height: auto;
+        padding: 8px 12px;
+        overflow-x: auto;
+        font-size: 18px;
+        border-bottom: 1px solid #999;
+    }
+    #seleccion a { flex: 0 0 auto; white-space: nowrap; padding: 10px 12px; border-radius: 6px; background: #f5f5dc; }
+    #seleccion a.active { background: #222; color: white; }
+    #orden #comidas > h1 { font-size: clamp(28px, 7vw, 40px); }
+    #orden #comidas > div { grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); }
+    footer { grid-template-columns: minmax(0, 1fr); padding: 24px 12px; }
+    #derecha-footer { grid-column: auto; }
+    #alergenos, #derecha-footer { width: 100%; max-width: 500px; justify-self: center; }
+    #carousel-novedades:hover, .card:hover { scale: 1; }
+}
+@media (hover: none), (prefers-reduced-motion: reduce) {
+    #carousel-novedades:hover, .card:hover, .botones:hover, #logo:hover, .icons-footer img:hover { scale: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; }
+}
+#orden #comidas > div { scroll-margin-top: calc(var(--section-offset) + 56px); }

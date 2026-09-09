@@ -67,7 +67,7 @@ header{
     color: white;
     border-radius: 20%;
 }
-#carta {
+.carta-link {
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -76,7 +76,7 @@ header{
     justify-content: center;
     text-align: center;
 }
-#carta::before {
+.carta-link::before {
     content: "";
     position: absolute;
     top: 0;
@@ -91,11 +91,11 @@ header{
 
     z-index: -1;
 }
-#carta:hover::before {
+.carta-link:hover::before {
     background-image: url("imagenes/carta.jpg");
     filter: blur(2px);
 }
-#carta:hover{
+.carta-link:hover{
     color: white;
     border-radius: 20%;
 }
