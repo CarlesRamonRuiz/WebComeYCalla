@@ -1,5 +1,5 @@
 function redireccionI(){
-    window.location.href = 'main.html'
+    window.location.href = 'index.html'
 }
 function redireccionC(){
     window.location.href = 'carta.html';
