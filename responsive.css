@@ -44,6 +44,17 @@ footer {
     gap: 24px;
 }
 footer > div { min-width: 0; }
+#copyright {
+    grid-column: 1 / -1;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+    text-shadow: 0 1px 2px black;
+}
 #alergenos { padding: 12px; }
 #lista { grid-template-columns: repeat(auto-fit, 60px); gap: 4px; }
 @media (max-width: 1100px) {
